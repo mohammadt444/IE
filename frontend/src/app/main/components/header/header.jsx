@@ -1,15 +1,24 @@
 import React from "react";
+import "./header.css";
 
 function Header() {
   return (
-    <div
-      style={{
-        display: "flex",
-        height: 55,
-        width: "100%",
-        background: "purple",
-      }}
-    ></div>
+    <div className="header">
+      <div className="header-wrapper">
+        <p className="header-title">فروشگاه</p>
+        <ul className="header-menu">
+          <li className="header-menu__item">صفحه اول</li>
+          <li className="header-menu__item">تماس با ما</li>
+          <li className="header-menu__item">پشتیبانی</li>
+          <li className="header-menu__item">محصولات</li>
+        </ul>
+      </div>
+      <div className="header-wrapper">
+        <div className="header-dropdown">
+          <p className="header-dropdown__text">ورود / ثبت نام</p>
+        </div>
+      </div>
+    </div>
   );
 }
 

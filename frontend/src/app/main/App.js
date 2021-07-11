@@ -22,6 +22,7 @@ function App() {
         }}
       >
         <Header />
+        <div style={{ display: "flex", flexGrow: 1 }}></div>
         <Footer />
       </div>
     </div>
