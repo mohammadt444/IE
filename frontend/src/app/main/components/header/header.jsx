@@ -16,6 +16,11 @@ function Header() {
       <div className="header-wrapper">
         <div className="header-dropdown">
           <p className="header-dropdown__text">ورود / ثبت نام</p>
+          <div class="header-dropdown-content">
+            <a>Link 1</a>
+            <a>Link 2</a>
+            <a>Link 3</a>
+          </div>
         </div>
       </div>
     </div>
