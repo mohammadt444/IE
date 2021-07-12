@@ -1,0 +1,17 @@
+.input {
+  display: flex;
+  flex-grow: 1;
+}
+
+.input-placeholder {
+  display: flex;
+  text-align: center;
+  flex-grow: 1;
+}
+
+.input-label {
+  background-color: powderblue;
+  display: flex;
+  width: 120px;
+  text-align: center;
+}

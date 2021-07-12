@@ -1,5 +1,6 @@
 import Footer from "./components/footer/footer";
 import Header from "./components/header/header";
+import Input from "./components/input/input";
 
 function App() {
   return (
@@ -22,7 +23,20 @@ function App() {
         }}
       >
         <Header />
-        <div style={{ display: "flex", flexGrow: 1 }}></div>
+        <div style={{ display: "flex", flexDirection: "column", flexGrow: 1 }}>
+          <div style={{ display: "flex", flexDirection: "row" }}>
+            <Input
+              type="email"
+              text="لطفا ایمیل خود را وادر کنید"
+              placeholder="salam"
+            />
+            <Input
+              type="email"
+              text="لطفا ایمیل خود را وادر کنید"
+              placeholder="salam"
+            />
+          </div>
+        </div>
         <Footer />
       </div>
     </div>
