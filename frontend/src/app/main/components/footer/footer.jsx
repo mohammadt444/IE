@@ -9,6 +9,7 @@ function Footer() {
         width: "100%",
         background: "black",
         justifyContent: "center",
+        alignItems: "center",
       }}
     >
       <p style={{ display: "flex", color: "white" }}>
