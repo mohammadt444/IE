@@ -48,8 +48,6 @@ function App() {
               <Home />
             </Route>
           </Switch>
-
-          <Profile admin />
         </div>
         <Footer />
       </div>

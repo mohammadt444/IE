@@ -9,23 +9,50 @@ function Header({ name, login }) {
         <p className="header-title">فروشگاه</p>
         <ul className="header-menu">
           <li className="header-menu__item">
-            <Link to="/">صفحه اول</Link>
+            <Link
+              style={{ color: "inherit", textDecoration: "inherit" }}
+              to="/"
+            >
+              صفحه اول
+            </Link>
           </li>
           <li className="header-menu__item">
-            <Link to="/contact-us">تماس با ما</Link>
+            <Link
+              style={{ color: "inherit", textDecoration: "inherit" }}
+              to="/contact-us"
+            >
+              تماس با ما
+            </Link>
           </li>
           <li className="header-menu__item">
-            <Link to="/support">\شتیبانی</Link>
+            <Link
+              style={{ color: "inherit", textDecoration: "inherit" }}
+              to="/support"
+            >
+              \شتیبانی
+            </Link>
           </li>
           <li className="header-menu__item">
-            <Link to="/product">محصولات</Link>
+            <Link
+              style={{ color: "inherit", textDecoration: "inherit" }}
+              to="/product"
+            >
+              محصولات
+            </Link>
           </li>
         </ul>
       </div>
       <div className="header-wrapper">
         <div className="header-dropdown">
           {!login ? (
-            <p className="header-dropdown__text">ورود / ثبت نام</p>
+            <p className="header-dropdown__text">
+              <Link
+                style={{ color: "inherit", textDecoration: "inherit" }}
+                to="/login"
+              >
+                ورود / ثبت نام
+              </Link>
+            </p>
           ) : (
             <>
               <p className="header-dropdown__text">{name}</p>
