@@ -4,6 +4,7 @@ import SearchPanel from "../../main/components/searchPanel/searchPanel";
 import ProductBox from "../../main/components/productBox/productBox";
 import SortBox from "../../main/components/sortBox/sortBox";
 import CategoryPanel from "../../main/components/categoryPanel/categoryPanel";
+import ProductWrapper from "./components/productWrapper/productWrapper";
 
 function Home() {
   return (
@@ -17,7 +18,7 @@ function Home() {
         {/* <Profile /> */}
         <div className="home-panel_container">
           <div className="home-panel-box">
-            <CategoryPanel />
+            <ProductWrapper />
           </div>
           <div className="home-panel-selectors">
             <CategoryPanel />
