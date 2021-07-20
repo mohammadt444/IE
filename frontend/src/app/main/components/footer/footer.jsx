@@ -7,12 +7,12 @@ function Footer() {
         display: "flex",
         height: 55,
         width: "100%",
-        background: "black",
+        background: "rgb(49,52,54)",
         justifyContent: "center",
         alignItems: "center",
       }}
     >
-      <p style={{ display: "flex", color: "white" }}>
+      <p style={{ display: "flex", color: "rgb(114,120,125)" }}>
         تمامی حقوق برای توسعه دهندگان محفوظ است
       </p>
     </div>
