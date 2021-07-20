@@ -1,7 +1,6 @@
 import React from "react";
 import "./home.css";
 import SearchPanel from "../../main/components/searchPanel/searchPanel";
-import ProductBox from "../../main/components/productBox/productBox";
 import SortBox from "../../main/components/sortBox/sortBox";
 import CategoryPanel from "../../main/components/categoryPanel/categoryPanel";
 import ProductWrapper from "./components/productWrapper/productWrapper";
@@ -14,8 +13,6 @@ function Home() {
         <div className="home-sortBox_container">
           <SortBox />
         </div>
-        {/* <ProductBox /> */}
-        {/* <Profile /> */}
         <div className="home-panel_container">
           <div className="home-panel-box">
             <ProductWrapper />
