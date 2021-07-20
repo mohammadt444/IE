@@ -38,7 +38,7 @@ function App() {
           }}
         >
           {/* <Home /> */}
-          <Profile />
+          <Profile admin/>
         </div>
         <Footer />
       </div>
