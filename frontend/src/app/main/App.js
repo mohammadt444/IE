@@ -37,7 +37,8 @@ function App() {
             overflow: "auto",
           }}
         >
-          <Home />
+          {/* <Home /> */}
+          <Profile />
         </div>
         <Footer />
       </div>
