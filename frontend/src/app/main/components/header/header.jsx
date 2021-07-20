@@ -1,7 +1,7 @@
 import React from "react";
 import "./header.css";
 
-function Header() {
+function Header({ name, login }) {
   return (
     <div className="header">
       <div className="header-wrapper">
@@ -15,11 +15,17 @@ function Header() {
       </div>
       <div className="header-wrapper">
         <div className="header-dropdown">
-          <p className="header-dropdown__text">ورود / ثبت نام</p>
-          <div class="header-dropdown-content">
-            <a></a>
-            <a></a>
-          </div>
+          {login ? (
+            <p className="header-dropdown__text">ورود / ثبت نام</p>
+          ) : (
+            <>
+              <p className="header-dropdown__text">{name}</p>
+              <div class="header-dropdown-content">
+                <a></a>
+                <a></a>
+              </div>
+            </>
+          )}
         </div>
       </div>
     </div>
@@ -27,3 +33,7 @@ function Header() {
 }
 
 export default Header;
+
+Header.defaultProps = {
+  name: "هادی",
+};
