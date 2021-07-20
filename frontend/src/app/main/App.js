@@ -9,6 +9,7 @@ import SortBox from "./components/sortBox/sortBox";
 import Profile from "../pages/profile/profile";
 import CategoryPanel from "./components/categoryPanel/categoryPanel";
 import Home from "../pages/home/home";
+import Login from "../pages/login/login";
 
 function App() {
   return (
@@ -41,6 +42,9 @@ function App() {
           }}
         >
           <Switch>
+            <Route path="/login">
+              <Login />
+            </Route>
             <Route path="/profile">
               <Profile />
             </Route>

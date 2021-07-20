@@ -8,7 +8,13 @@ function Input({ type, text, placeholder }) {
         type={type}
         name="txtSearch"
         placeholder={placeholder}
-        pattern={type === "email" ? "*@*.*" : type === "name" ? "s" : ""}
+        pattern={
+          type === "email"
+            ? "[a-z0-9._%+-]+@[a-z0-9.-]+.[a-z]{2,}$"
+            : type === "password"
+            ? ".{6,}"
+            : ""
+        }
         className="input-placeholder"
       />
       <label for="user-name" className="input-label">
