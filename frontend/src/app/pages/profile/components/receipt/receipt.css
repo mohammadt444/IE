@@ -1,0 +1,22 @@
+.receipt-table_container {
+  display: flex;
+  width: 100%;
+  background-color: white;
+}
+
+.receipt-table {
+  width: 100%;
+  margin: 20px 0px;
+  direction: rtl;
+}
+
+.receipt-table th,
+td {
+  padding: 8px;
+  padding-right: 20px;
+  text-align: right;
+  border-bottom: 1px solid #ddd;
+}
+.receipt-table th {
+  color: rgb(200, 200, 200);
+}
