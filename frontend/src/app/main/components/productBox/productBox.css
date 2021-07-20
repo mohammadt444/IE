@@ -1,11 +1,12 @@
 .productBox {
-  border: 1px solid black;
+  /* border: 1px solid black; */
   display: flex;
   /* flex-direction: column; */
   justify-content: center;
   align-items: center;
   width: 100%;
   max-width: 300px;
+  background-color: white;
 }
 
 .productBox-container {

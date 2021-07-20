@@ -1,4 +1,5 @@
 import React from "react";
+import './productWrapper.css'
 import ProductBox from '../../../../main/components/productBox/productBox'
 
 function ProductWrapper() {

@@ -1,6 +1,6 @@
 .productWrapper{
     display: flex;
-    flex-direction: column;   
+    flex-direction: column; 
 }
 
 .productWrapper_container{
