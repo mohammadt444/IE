@@ -15,7 +15,7 @@ function Header({ name, login }) {
       </div>
       <div className="header-wrapper">
         <div className="header-dropdown">
-          {login ? (
+          {!login ? (
             <p className="header-dropdown__text">ورود / ثبت نام</p>
           ) : (
             <>
