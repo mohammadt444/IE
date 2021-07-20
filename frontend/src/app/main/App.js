@@ -1,3 +1,6 @@
+import React from "react";
+import { Switch, Route } from "react-router-dom";
+
 import Footer from "./components/footer/footer";
 import Header from "./components/header/header";
 import SearchPanel from "./components/searchPanel/searchPanel";
@@ -37,8 +40,16 @@ function App() {
             overflow: "auto",
           }}
         >
-          {/* <Home /> */}
-          <Profile admin/>
+          <Switch>
+            <Route path="/profile">
+              <Profile />
+            </Route>
+            <Route path="/">
+              <Home />
+            </Route>
+          </Switch>
+
+          <Profile admin />
         </div>
         <Footer />
       </div>
