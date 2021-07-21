@@ -6,6 +6,10 @@ import CategoryPanel from "../../main/components/categoryPanel/categoryPanel";
 import ProductWrapper from "./components/productWrapper/productWrapper";
 
 function Home() {
+  const products = [...Array(40).keys()].map((i) => ({
+    name: "نام کالا",
+    price: i * 100,
+  }));
   return (
     <div className="home">
       <SearchPanel />
@@ -15,7 +19,7 @@ function Home() {
         </div>
         <div className="home-panel_container">
           <div className="home-panel-box">
-            <ProductWrapper />
+            <ProductWrapper products={products} />
           </div>
           <div className="home-panel-selectors">
             <CategoryPanel />

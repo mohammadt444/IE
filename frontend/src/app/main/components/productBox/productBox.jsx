@@ -3,21 +3,19 @@ import "./productBox.css";
 //util
 import { toPersian } from "../../../../helper/functions/utils";
 
-function ProductBox() {
+function ProductBox({ name, category, price, imgSrc }) {
   return (
     <div className="productBox">
       <div className="productBox-container">
-        <img
-          src="/assets/img.png"
-          alt="product img"
-          className="productBox-img"
-        />
-        <label className="productBox-name">نام</label>
-        <label className="productBox-category">دسته بندی</label>
+        <img src={imgSrc} alt="product img" className="productBox-img" />
+        <label className="productBox-name">{name}</label>
+        <label className="productBox-category">{category}</label>
         <div className="productBox-line"></div>
         <div className="productBox-price_container">
           <button className="productBox-buy">خرید محصول</button>
-          <label className="productBox-price">{toPersian("1000 تومان")}</label>
+          <label className="productBox-price">
+            {toPersian(`${price} تومان`)}
+          </label>
         </div>
       </div>
     </div>
@@ -25,3 +23,9 @@ function ProductBox() {
 }
 
 export default ProductBox;
+ProductBox.defaultProps = {
+  name: "نام",
+  category: "دسته بندی",
+  price: 1000,
+  imgSrc: "/assets/img.png",
+};
