@@ -1,0 +1,46 @@
+.categoryView_container {
+  display: flex;
+  width: 100%;
+  background-color: white;
+}
+
+.categoryView {
+  width: 100%;
+  margin: 20px 0px;
+  direction: rtl;
+}
+
+.categoryView th,
+.categoryView td {
+  padding: 8px;
+  padding-right: 20px;
+  border-bottom: 1px solid #ddd;
+  text-align: center;
+  vertical-align: middle;
+}
+.categoryView th {
+  color: rgb(200, 200, 200);
+}
+
+.categoryView-button {
+  /* display: flex; */
+  border: none;
+  font-size: 16px;
+  font-weight: 500;
+  transition-duration: 0.2s;
+  color: black;
+  background-color: white;
+  border-radius: 24px;
+  cursor: pointer;
+  padding: 5px 10px;
+  margin: 0px 10px;
+  box-shadow: 0px 0px 10px 0px rgba(33, 33, 33, 0.2);
+}
+
+.categoryView-button:hover {
+  box-shadow: 0px 0px 6px 0px rgba(33, 33, 33, 0.5);
+}
+
+.categoryView-button:active {
+  background-color: rgb(220, 220, 220);
+}

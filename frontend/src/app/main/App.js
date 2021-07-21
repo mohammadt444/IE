@@ -10,6 +10,7 @@ import Profile from "../pages/profile/profile";
 import CategoryPanel from "./components/categoryPanel/categoryPanel";
 import Home from "../pages/home/home";
 import Login from "../pages/login/login";
+import Sign_in from "../pages/login/sign_in";
 
 function App() {
   return (
@@ -44,6 +45,9 @@ function App() {
           <Switch>
             <Route path="/login">
               <Login />
+            </Route>
+            <Route path="/signin">
+              <Sign_in />
             </Route>
             <Route path="/profile">
               <Profile admin />

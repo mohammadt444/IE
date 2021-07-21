@@ -4,6 +4,7 @@ import { toPersian } from "../../../helper/functions/utils";
 import Info from "./components/info/info";
 import Receipt from "./components/receipt/receipt";
 import ProductView from "./components/productView/productView";
+import CategoryView from "./components/categoryView/categoryView";
 
 function Profile({ admin }) {
   const [tab, setTab] = useState(0);
@@ -32,7 +33,13 @@ function Profile({ admin }) {
           رسید ها
         </label>
       </div>
-      {tab === 0 ? <ProductView /> : <Receipt />}
+      {tab === 0 ? (
+        <ProductView />
+      ) : tab === 1 ? (
+        <CategoryView />
+      ) : (
+        <Receipt admin />
+      )}
     </div>
   ) : (
     <div className="profile">
