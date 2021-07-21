@@ -39,7 +39,9 @@ function ProductWrapper({ products, admin }) {
         {[...Array(pageCount).keys()].map((i) => (
           <button
             onClick={() => setPageNumber(i)}
-            className="productWrapper-page_button"
+            className={`productWrapper-page_button ${
+              pageNumber === i ? "productWrapper-page_button_enabled" : ""
+            }`}
           >
             {i + 1}
           </button>

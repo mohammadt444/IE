@@ -18,6 +18,7 @@
   display: flex;
   flex-direction: row-reverse;
   align-content: center;
+  margin: 10px 0px;
 }
 
 .productWrapper-page_button {
@@ -46,4 +47,9 @@
 .productWrapper-page_button_disabled {
   color: rgb(132, 132, 132);
   background-color: rgb(215, 215, 215);
+}
+
+.productWrapper-page_button_enabled {
+  color: rgb(230, 230, 230);
+  background-color: rgb(0, 157, 255);
 }
