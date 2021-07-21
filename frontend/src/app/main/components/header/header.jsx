@@ -29,7 +29,7 @@ function Header({ name, login }) {
               style={{ color: "inherit", textDecoration: "inherit" }}
               to="/support"
             >
-              \شتیبانی
+              پشتیبانی
             </Link>
           </li>
           <li className="header-menu__item">
@@ -57,8 +57,8 @@ function Header({ name, login }) {
             <>
               <p className="header-dropdown__text">{name}</p>
               <div class="header-dropdown-content">
-                <a></a>
-                <a></a>
+                <a>پروفایل</a>
+                <a>خروج از حساب</a>
               </div>
             </>
           )}
