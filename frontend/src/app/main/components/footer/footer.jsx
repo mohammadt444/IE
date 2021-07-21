@@ -10,6 +10,7 @@ function Footer() {
         background: "rgb(49,52,54)",
         justifyContent: "center",
         alignItems: "center",
+        flexShrink: 0,
       }}
     >
       <p style={{ display: "flex", color: "rgb(114,120,125)" }}>

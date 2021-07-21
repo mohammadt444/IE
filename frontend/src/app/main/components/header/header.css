@@ -5,6 +5,7 @@
   height: 65px;
   width: 100%;
   background: white;
+  flex-shrink: 0;
 }
 
 .header-wrapper {
