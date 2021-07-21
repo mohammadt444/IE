@@ -1,12 +1,22 @@
 .productBox {
   /* border: 1px solid black; */
   display: flex;
-  /* flex-direction: column; */
-  justify-content: center;
   align-items: center;
   width: 100%;
   max-width: 300px;
   background-color: white;
+  position: relative;
+}
+
+.productBox-count {
+  position: absolute;
+  align-self: flex-start;
+  background-color: white;
+  box-shadow: 3px 3px 10px 1px rgba(33, 33, 33, 0.3);
+  border-radius: 48px;
+  padding: 0px 9px;
+  /* margin-top: -50%; */
+  transform: translate(-50%, -50%);
 }
 
 .productBox-container {
@@ -55,15 +65,16 @@
 .productBox-buy {
   display: flex;
   border: none;
-  font-size: 16px;
+  font-size: 13px;
   font-weight: 500;
   transition-duration: 0.5s;
   color: white;
   font-weight: 700;
   background-color: rgb(0, 157, 255);
   border-radius: 24px;
-  padding: 10px;
+  padding: 5px 10px;
   box-shadow: 1px 4px 5px 1px rgba(0, 157, 255, 0.25);
+  align-items: center;
 }
 
 .productBox-buy:hover {
