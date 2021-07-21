@@ -6,6 +6,9 @@ export const reducer = (state, action) => {
     case "REMOVE_BOOK":
       return state.filter((book) => book.id !== action.id);
 
+    case "SET_PRODUCTS":
+      return { ...state, products: action.payload };
+
     default:
       return state;
   }

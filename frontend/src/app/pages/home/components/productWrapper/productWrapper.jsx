@@ -1,10 +1,14 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import "./productWrapper.css";
 import ProductBox from "../../../../main/components/productBox/productBox";
+import { Context } from "../../../../../setup/store";
 
-function ProductWrapper({ products, admin }) {
+function ProductWrapper({ admin }) {
   const [pageNumber, setPageNumber] = useState(0);
+  const { store } = useContext(Context);
+  const { products } = store;
   const pageCount = Math.ceil(products.length / 15);
+
   return (
     <div className="productWrapper">
       {[
