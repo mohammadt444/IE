@@ -1,10 +1,11 @@
-import React from "react";
+import React, { useState } from "react";
 import "./profile.css";
 import { toPersian } from "../../../helper/functions/utils";
 import Info from "./components/info/info";
 import Receipt from "./components/receipt/receipt";
 
 function Profile({ admin }) {
+  const [tab, setTab] = useState(0);
   return admin ? (
     <div className="profile">
       <div className="profile-header_container">
@@ -12,12 +13,26 @@ function Profile({ admin }) {
         <button className="profile-addBalance">افزایش موجودی</button>
       </div>
       <div className="profile-tab_container">
-        <label className="profile-tab profile-tab_enabled">لیست کالا ها</label>
-        <label className="profile-tab">لیست دسته ها</label>
-        <label className="profile-tab">رسید ها</label>
+        <label
+          onClick={() => setTab(0)}
+          className={`profile-tab ${tab === 0 ? "profile-tab_enabled" : ""}`}
+        >
+          لیست کالا ها
+        </label>
+        <label
+          onClick={() => setTab(1)}
+          className={`profile-tab ${tab === 1 ? "profile-tab_enabled" : ""}`}
+        >
+          لیست دسته ها
+        </label>
+        <label
+          onClick={() => setTab(2)}
+          className={`profile-tab ${tab === 2 ? "profile-tab_enabled" : ""}`}
+        >
+          رسید ها
+        </label>
       </div>
-      {/* <Info/> */}
-      <Receipt />
+      {tab === 0 ? <Info /> : <Receipt />}
     </div>
   ) : (
     <div className="profile">
@@ -30,11 +45,20 @@ function Profile({ admin }) {
         <button className="profile-addBalance">افزایش موجودی</button>
       </div>
       <div className="profile-tab_container">
-        <label className="profile-tab profile-tab_enabled">پروفایل</label>
-        <label className="profile-tab">رسید ها</label>
+        <label
+          onClick={() => setTab(0)}
+          className={`profile-tab ${tab === 0 ? "profile-tab_enabled" : ""}`}
+        >
+          پروفایل
+        </label>
+        <label
+          onClick={() => setTab(1)}
+          className={`profile-tab ${tab === 1 ? "profile-tab_enabled" : ""}`}
+        >
+          رسید ها
+        </label>
       </div>
-      {/* <Info/> */}
-      <Receipt />
+      {tab === 0 ? <Info /> : <Receipt />}
     </div>
   );
 }

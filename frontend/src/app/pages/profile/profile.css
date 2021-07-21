@@ -80,4 +80,5 @@
 .profile-tab_enabled {
   background-color: rgb(238, 238, 238);
   color: rgb(50, 50, 50);
+  transition-duration: 1;
 }
