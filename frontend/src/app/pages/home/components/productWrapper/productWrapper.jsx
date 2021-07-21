@@ -25,16 +25,6 @@ function ProductWrapper({ products }) {
             ))}
           </div>
         ))}
-      {/* <div className="productWrapper_container">
-        <ProductBox />
-        <ProductBox />
-        <ProductBox />
-      </div>
-      <div className="productWrapper_container">
-        <ProductBox />
-        <ProductBox />
-        <ProductBox />
-      </div> */}
       <div className="productWrapper-page">
         <button
           onClick={() => setPageNumber(pageNumber - 1)}
