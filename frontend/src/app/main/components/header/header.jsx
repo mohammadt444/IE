@@ -1,6 +1,7 @@
 import React from "react";
 import "./header.css";
 import { Link } from "react-router-dom";
+import { HashLink } from "react-router-hash-link";
 
 function Header({ name, login }) {
   return (
@@ -33,12 +34,13 @@ function Header({ name, login }) {
             </Link>
           </li>
           <li className="header-menu__item">
-            <Link
+            <HashLink
+              smooth
               style={{ color: "inherit", textDecoration: "inherit" }}
-              to="/product"
+              to="/#product"
             >
               محصولات
-            </Link>
+            </HashLink>
           </li>
         </ul>
       </div>

@@ -17,7 +17,7 @@ function Home() {
         <div className="home-sortBox_container">
           <SortBox />
         </div>
-        <div className="home-panel_container">
+        <div className="home-panel_container" id="product">
           <div className="home-panel-box">
             <ProductWrapper products={products} />
           </div>
