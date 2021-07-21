@@ -1,13 +1,16 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import "./searchPanel.css";
 
 const pics = ["/assets/clock.png", "/assets/giftBox.png", "/assets/awning.png"];
 
 function SearchPanel() {
   const [picNumber, setPicNumber] = useState(2);
-  setInterval(() => {
-    setPicNumber((picNumber + 1) % pics.length);
-  }, 10000);
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setPicNumber((picNumber + 1) % pics.length);
+    }, 10000);
+    return () => clearInterval(interval);
+  }, []);
   return (
     <div className="searchPanel">
       <label className="searchPanel-header">در محصولات سایت جستجو کنید..</label>
