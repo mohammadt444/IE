@@ -46,7 +46,7 @@ function App() {
               <Login />
             </Route>
             <Route path="/profile">
-              <Profile />
+              <Profile admin />
             </Route>
             <Route path="/">
               <Home />

@@ -3,6 +3,7 @@ import "./profile.css";
 import { toPersian } from "../../../helper/functions/utils";
 import Info from "./components/info/info";
 import Receipt from "./components/receipt/receipt";
+import ProductView from "./components/productView/productView";
 
 function Profile({ admin }) {
   const [tab, setTab] = useState(0);
@@ -10,7 +11,6 @@ function Profile({ admin }) {
     <div className="profile">
       <div className="profile-header_container">
         <label className="profile-welcome">ادمین عزیز خوش آمدید</label>
-        <button className="profile-addBalance">افزایش موجودی</button>
       </div>
       <div className="profile-tab_container">
         <label
@@ -32,7 +32,7 @@ function Profile({ admin }) {
           رسید ها
         </label>
       </div>
-      {tab === 0 ? <Info /> : <Receipt />}
+      {tab === 0 ? <ProductView /> : <Receipt />}
     </div>
   ) : (
     <div className="profile">

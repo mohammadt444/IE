@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import "./productWrapper.css";
 import ProductBox from "../../../../main/components/productBox/productBox";
 
-function ProductWrapper({ products }) {
+function ProductWrapper({ products, admin }) {
   const [pageNumber, setPageNumber] = useState(0);
   const pageCount = Math.ceil(products.length / 15);
   return (
@@ -21,6 +21,7 @@ function ProductWrapper({ products }) {
                 category={product.category}
                 price={product.price}
                 imgSrc={product.imgSrc}
+                admin={admin}
               />
             ))}
           </div>
