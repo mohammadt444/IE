@@ -13,6 +13,18 @@
   margin-left: 10px;
 }
 
+.input-placeholder:focus-visible {
+  outline: none;
+}
+
+.input-placeholder_correct {
+  border: 2px solid green;
+}
+
+.input-placeholder_error {
+  border: 2px solid red;
+}
+
 .input-label {
   background-color: #00ccff;
   display: block;

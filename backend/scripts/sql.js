@@ -5,7 +5,16 @@ const connectionString =
 
 const queryStrings = {
   products: "SELECT * FROM Product ORDER BY sold desc",
-  products_price: "SELECT * FROM Product ORDER BY sold price",
+  products_price: "SELECT * FROM Product ORDER BY price desc",
+  categories: "SELECT * FROM Category",
 };
 
-export const getProducts = () => query(queryStrings.products);
+export const getProducts = (sort) => {
+  if (sort === "price") {
+    return query(queryStrings.products_price);
+  } else {
+    return query(queryStrings.products);
+  }
+};
+
+export const getCategories = () => query(queryStrings.categories);

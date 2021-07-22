@@ -1,10 +1,26 @@
-import React, { useEffect, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
+import { post } from "../../../../setup/requests";
+import { Context } from "../../../../setup/store";
 import "./searchPanel.css";
 
 const pics = ["/assets/clock.png", "/assets/giftBox.png", "/assets/awning.png"];
-
 function SearchPanel() {
   const [picNumber, setPicNumber] = useState(2);
+  const [searchString, setSearchString] = useState("");
+  const { dispatch, store } = useContext(Context);
+  const { sort, selected_categories } = store;
+  const search = () => {
+    post("/product", {
+      sort,
+      selected_categories,
+      searchString,
+    })
+      .then((res) => res.data)
+      .then((products) => {
+        dispatch({ type: "SET_PRODUCTS", payload: products });
+        setSearchString("");
+      });
+  };
   useEffect(() => {
     const interval = setInterval(() => {
       setPicNumber((picNumber + 1) % pics.length);
@@ -15,10 +31,14 @@ function SearchPanel() {
     <div className="searchPanel">
       <label className="searchPanel-header">در محصولات سایت جستجو کنید..</label>
       <input
+        value={searchString}
+        onChange={(e) => setSearchString(e.target.value)}
         placeholder="نام محصول خود را وارد کنید.."
         className="searchPanel-input"
       />
-      <button className="searchPanel-button">جستجو کنید</button>
+      <button onClick={() => search()} className="searchPanel-button">
+        جستجو کنید
+      </button>
       <img className="searchPanel-img" src={pics[picNumber]} alt="clock" />
       <div
         onClick={() =>
